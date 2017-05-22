@@ -1,0 +1,194 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.container {
+  padding: 5px;
+  border: 2px solid rgb(0, 0, 0);
+  width: 780px;
+  height: auto;
+}
+
+
+div {
+  float:left;
+  margin:0px;
+  height:19px;
+  line-height:19px;
+  bborder-left:1px solid blue;
+  bborder-bottom:1px solid blue;
+
+}
+span {
+  background: white;
+}
+.center {
+  text-align:center;
+}
+.right {
+  text-align:right;
+}
+.clearfix {
+  overflow: auto;
+}
+br {
+  clear: both;
+}
+
+input[type=text] {
+  outline: none;
+  margin: 0px;
+  border: none;
+  height: 100%;
+  width: 100%;
+  text-align: right;
+  color:black;
+}
+
+input.enterable[type=text] {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  background-color: lightgoldenrodyellow;
+  color:blue;
+}
+
+input.enterable[type=text]:focus{
+  box-shadow: 0 0 15px rgb(0,119,204);
+  border: 1px solid  rgb(0,119,204);
+  padding: 3px 0px 3px 3px;
+  padding-right:8px;
+  margin-left: -3px;
+  margin-top:-4px;
+  border-radius:2px;
+  background-color:white;
+  position:relative;
+  height:22px;
+}
+
+.dots {
+  background: url('../../src/assets/dots.png');
+}
+.dots_with_arrow {
+  background: url('../../src/assets/dots.png');
+  background-position-x:right;
+}
+.bottom {
+  border-bottom:solid 1px black;
+  height:18px;
+  width:100%;
+}
+
+.qzbutton {
+  background-image: linear-gradient(to bottom, #A5B8DA, #7089B3);
+  border:solid 1px #666;
+  border-radius:4px;
+  color:white;
+  font-size:10px;
+  font-weight:bold;
+  height:19px;
+  cursor:pointer;
+
+}
+
+.verticalToptoBottom {
+  background-image: url('../../src/assets/vertline.png');
+  background-repeat:  repeat-y;
+}
+.horizontalLefttoRight {
+  background-image: url('../../src/assets/horzline.png');
+  background-repeat:  repeat-x;
+}
+.horizontalLefttoRightverticalToptoMid {
+  background-image: url('../../src/assets/horzlineUp.png');
+}
+.horizontalLefttoRightverticalMidtoBottom {
+  background-image: url('../../src/assets/horzlineDown.png');
+}
+
+.horizontalMidtoRightverticalToptoBottom {
+  background-image: url('../../src/assets/vertlineRight.png');
+}
+.horizontalLefttoMidverticalToptoBottom {
+  background-image: url('../../src/assets/vertlineRight.png');
+}
+.horizontalLefttoRightverticalToptoBottom {
+  background-image: url('../../src/assets/crossline.png');
+}
+.horizontalMidtoRightverticalMidtoBottom {
+  background-image: url('../../src/assets/cornerTopRight.png');
+}
+.horizontalLefttoMidverticalMidtoBottom {
+  background-image: url('../../src/assets/cornerTopLeft.png');
+}
+.horizontalMidtoRightverticalToptoMid {
+  background-image: url('../../src/assets/cornerBottomLeft.png');
+}
+.horizontalLefttoMidverticalToptoMid {
+  background-image: url('../../src/assets/cornerBottomRight.png');
+}
+
+.QT-12-B {
+  font-family: 'QuickType II';
+  font-weight:800;
+  font-size:12pt;
+}
+.QT-12{
+  font-family: 'QuickType II';
+  font-size:12pt;
+}
+.QT-11-B {
+  font-family: 'QuickType II';
+  font-weight:800;
+  font-size:11pt;
+}
+.QT-11{
+  font-family: 'QuickType II';
+  font-size:11pt;
+}
+.QT-10-B {
+  font-family: 'QuickType II';
+  font-weight:800;
+  font-size:11pt;
+}
+.QT-10{
+  font-family: 'QuickType II';
+  font-size:11pt;
+}
+.QT-9 {
+  font-family:'QuickType II';
+  font-size:9pt;
+}
+.QT-9-B {
+  font-family:'QuickType II';
+  font-size:9pt;
+  font-weight:800;
+}
+.QT-9-I {
+  font-family:'QuickType II';
+  font-size:9pt;
+  font-style:italic;
+}
+.QT-8 {
+  font-family:'QuickType II';
+  font-size:8pt;
+}
+.QT-8-B {
+  font-family:'QuickType II';
+  font-size:8pt;
+  font-weight:800;
+}
+.QP-10 {
+  font-family:'QuickType II Pi';
+}
+.QP-12 {
+  font-family:'QuickType II Pi';
+}
+.CN-10 {
+  font-family:'Courier New';
+  color:blue;
+  font-weight:bold;
+}
+
