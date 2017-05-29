@@ -1,7 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import * as _ from 'lodash';
 import { connect } from 'react-redux';
-import { updateModel, updateModelSuccess } from './../actions/model-actions';
+import { fire_external_event} from './../actions/external-event-actions';
+import { setDataVal } from './../actions/model-actions';
 
 class Field extends Component {
 
@@ -18,7 +19,7 @@ class Field extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props.model  !== nextProps.model) {
+    if (!this.props.data.enterable && this.props.model  !== nextProps.model) {
       const val = _.get(nextProps.model,this.props.data.binding);
       if(val !== undefined && this.state.value !== val) {
         if(isNaN(val))
@@ -26,7 +27,6 @@ class Field extends Component {
         else{
           if (this.state.value=="") this.setState({value:0});
           let increment = Math.floor((val - this.state.value)/14) || 1;
-          console.log(increment)
           setTimeout(()=> this.animate(increment,val),10)
         }
       }
@@ -52,7 +52,8 @@ class Field extends Component {
       return false;
     }
     if(e.keyCode == 13){
-      alert('Adding....');
+      this.props.setDataVal(this.props.data.binding, e.target.value);
+
     }
     const val = e.target.value
 
@@ -63,15 +64,21 @@ class Field extends Component {
   }
 
   render() {
+
     const data = this.props.data;
+    console.log(this.state.value)
+
+    const props = {
+      type:(data.field_type == 'box')?'checkbox':'text',
+      id:data.binding,
+      className:`${data.style}${(data.enterable)?' enterable':''}`,
+      [data.enterable ? 'defaultValue' : 'value']:this.state.value,
+      onKeyDown:this.onKeyPress,
+      onBlur:this.onBlur
+    };
+
     return (
-      <input type={data.field_type == 'box'?'checkbox':'text'}
-             id={data.binding}
-             className={`${data.style}${(data.enterable)?' enterable':''}`}
-             defaultValue={this.state.value}
-             onKeyDown={this.onKeyPress}
-             onBlur={this.onBlur}
-      />
+      <input  {...props} />
     );
   }
 }
@@ -83,12 +90,13 @@ Field.propTypes = {
 function mapStateToProps(store) {
   return {
     model: store.model,
+    external_event: store.external_event
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    updateModel: (frf) => dispatch(updateModel(frf)),
+    setDataVal: (binding, value) => dispatch( setDataVal(binding, value))
   };
 }
 

@@ -16,7 +16,7 @@ module.exports = {
     path: path.resolve('../FormsModeDemo/bin/Debug'),
     filename: 'index_bundle.js',
     libraryTarget: "var",
-    library: ["ABC"],
+    library: ["FormPlayer"],
   },
 
   module: {

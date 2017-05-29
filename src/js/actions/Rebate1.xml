@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Nodes topic="RebateSubmission"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="TKE_Calc_Graph.xsd" >
+
+    <Versions>
+        <Version id="TKE.Calc.Runtime">1</Version>
+        <Version id="TKE.Calc.FileFormat">6</Version>
+        <Version id="TKE.Gist">1</Version>
+        <Version id="TKE.MeF">1</Version>
+    </Versions>
+
+    <Node name="/Return/Data/RebateSubmissionForm/RebateAmount">
+        <Inputs>
+            <Input>/Return/Data/RebateSubmissionForm/PurchasePrice</Input>
+            <Input>/Return/Data/RebateSubmissionForm/RebatePercentage</Input>
+        </Inputs>
+        <Gist>
+            <PercentageOf>
+                <InputRoles>
+                    <Value>/Return/Data/RebateSubmissionForm/PurchasePrice</Value>
+                    <Percentage>/Return/Data/RebateSubmissionForm/RebatePercentage</Percentage>
+                </InputRoles>
+                <Configuration>
+                    <ValueType>price</ValueType>
+                    <OutputType>rebate</OutputType>
+                </Configuration>
+            </PercentageOf>
+        </Gist>
+        <PostProcessing>
+            <RoundTo><Dollars/></RoundTo>
+        </PostProcessing>
+    </Node>
+
+    <InputNode name="/Return/Data/RebateSubmissionForm/PurchasePrice">
+        <PostProcessing>
+            <RoundTo><Dollars/></RoundTo>
+        </PostProcessing>
+    </InputNode>
+    <InputNode name="/Return/Data/RebateSubmissionForm/RebatePercentage">
+        <PostProcessing>
+            <RoundTo><Integer/></RoundTo>
+        </PostProcessing>
+    </InputNode>
+</Nodes>

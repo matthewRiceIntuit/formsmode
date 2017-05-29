@@ -4,37 +4,50 @@ import App from './components/app.js';
 import '../theme/app.scss';
 import { Provider } from 'react-redux';
 import configureStore from './store/configure-store';
-import {updateModelSuccess} from './actions/model-actions';
+import {updateModelSuccess, updateModel} from './actions/model-actions';
+import {event_subscribe} from './actions/external-event-actions';
 
-
-import {ptform} from './mock/ptform-mock.js';
-
+import {ptform} from './mock/ptform-mock';
+import {model} from './mock/billsBigOne';
 
 module.exports = {
   renderComponent: renderComponent,
   go: go,
   test: test,
-  setModel: setModel
+  setModel: setModel,
+  subscribe: subscribe
 }
 
 export const store = configureStore({});
 
-export function go(){
-  store.dispatch(updateModelSuccess({L1:123244,L2:2323,L3:655,L18:100}))
+export function go(frf){
+  //store.dispatch(updateModel(model))
   renderComponent(ptform);
 }
 
 export function renderComponent(frf) {
   ReactDOM.render(<App frf={frf} store={store} />, document.getElementById('root'));
+  subscribe("FIELD_CHANGE",test_subscribe)
+  subscribe("junk",test_subscribe2)
+  subscribe("FIELD_CHANGE",test_subscribe2)
   //setTimeout(() => store.dispatch(updateModelSuccess({AMENDED:"HELLO",L1:12334,L2:343,L3:2435})),100)
 }
 
 export function test(){
-  store.dispatch(updateModelSuccess({L1:123244}))
+  store.dispatch(updateModel(model))
 }
 
 export function setModel(obj){
-  store.dispatch(updateModelSuccess(obj))
+  store.dispatch(updateModel(obj))
 }
 
-go()
+export function subscribe(type, func){
+  store.dispatch(event_subscribe(type, func));
+}
+
+export function test_subscribe(){
+  alert("hello world!")
+}
+export function test_subscribe2(){
+  alert("hello other world!")
+}

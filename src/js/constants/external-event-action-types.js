@@ -1,0 +1,1 @@
+export const SUBSCRIBE_EVENT = 'SUBSCRIBE_EVENT';
