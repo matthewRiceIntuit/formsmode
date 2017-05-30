@@ -1,1 +1,2 @@
 export const SUBSCRIBE_EVENT = 'SUBSCRIBE_EVENT';
+export const FIELD_CHANGE = 'FIELD_CHANGE';

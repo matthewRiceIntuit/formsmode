@@ -6,7 +6,7 @@ import {
   FIELD_CHANGE
 } from './../constants/external-event-action-types';
 
-import {flatten, unflatten} from './../util/flatten';
+import {flatten} from './../util/flatten';
 import {fire_external_event} from './external-event-actions';
 
 
@@ -39,7 +39,7 @@ export function setDataVal(binding, value){
   console.log(`setDataVal( ${binding}, ${value}`)
   return (dispatch, getState) => {
     dispatch(updateFieldSuccess(binding, value));
-    dispatch(fire_external_event(FIELD_CHANGE,unflatten(getState().model)));
+    dispatch(fire_external_event(FIELD_CHANGE));
   }
 }
 

@@ -18,7 +18,9 @@ module.exports = {
     libraryTarget: "var",
     library: ["FormPlayer"],
   },
-
+  externals: {
+    validate: "validate"
+  },
   module: {
     loaders: [
       {test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/},

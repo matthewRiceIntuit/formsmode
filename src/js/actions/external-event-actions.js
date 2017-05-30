@@ -13,9 +13,9 @@ export function event_subscribe(event_type, func) {
 
 export function fire_external_event(event_type, param){
   return (dispatch, getState) => {
-    debugger
     const events = getState().external_event.functions.filter( (data) => data.event_type === event_type);
-    events.forEach((evnt)=> evnt.func())
+    const model = {Return: unflatten( getState().model)};
+    events.forEach((evnt)=> evnt.func(model));
   }
 }
 

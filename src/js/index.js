@@ -27,14 +27,12 @@ export function go(frf){
 
 export function renderComponent(frf) {
   ReactDOM.render(<App frf={frf} store={store} />, document.getElementById('root'));
-  subscribe("FIELD_CHANGE",test_subscribe)
-  subscribe("junk",test_subscribe2)
-  subscribe("FIELD_CHANGE",test_subscribe2)
   //setTimeout(() => store.dispatch(updateModelSuccess({AMENDED:"HELLO",L1:12334,L2:343,L3:2435})),100)
 }
 
 export function test(){
   store.dispatch(updateModel(model))
+  //subscribe("FIELD_CHANGE",window.external.validate)
 }
 
 export function setModel(obj){
