@@ -39,7 +39,7 @@ export function setDataVal(binding, value){
   console.log(`setDataVal( ${binding}, ${value}`)
   return (dispatch, getState) => {
     dispatch(updateFieldSuccess(binding, value));
-    dispatch(fire_external_event(FIELD_CHANGE));
+    dispatch(fire_external_event(FIELD_CHANGE,{binding,value}));
   }
 }
 

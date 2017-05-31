@@ -14,6 +14,7 @@ module.exports = {
   renderComponent: renderComponent,
   go: go,
   test: test,
+  test2: test2,
   setModel: setModel,
   subscribe: subscribe
 }
@@ -21,7 +22,7 @@ module.exports = {
 export const store = configureStore({});
 
 export function go(frf){
-  //store.dispatch(updateModel(model))
+  store.dispatch(updateModel(model))
   renderComponent(ptform);
 }
 
@@ -32,7 +33,11 @@ export function renderComponent(frf) {
 
 export function test(){
   store.dispatch(updateModel(model))
-  //subscribe("FIELD_CHANGE",window.external.validate)
+}
+export function test2(){
+  model.ReturnData.IRS709[1].CurrentYearAllowableCredit = 5;
+  store.dispatch(updateModel(model))
+
 }
 
 export function setModel(obj){

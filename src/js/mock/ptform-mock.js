@@ -1691,7 +1691,7 @@ export const ptform = {
         "width": 120,
         "type": "gridfield",
         "style": "bottom",
-        "field": {"type": "field", "style": "CN-10", "binding": "L7", "field_type": "dollar", "enterable": true}
+        "field": {"type": "field", "style": "CN-10", "binding": "ReturnData.IRS709[1].TotalCredit", "field_type": "dollar", "enterable": false}
       }
     }]
   }, {
@@ -1860,7 +1860,7 @@ export const ptform = {
         "field": {
           "type": "field",
           "style": "CN-10",
-          "binding": "ReturnData.IRS709[1].SpecialBicentennialCredit",
+          "binding": "ReturnPP.Taxpayer.GeneralInformation.SpecialExemptionFor1976Gifts",
           "field_type": "dollar",
           "enterable": true
         }
@@ -1986,7 +1986,7 @@ export const ptform = {
         "field": {
           "type": "field",
           "style": "CN-10",
-          "binding": "ReturnData.IRS709[1].ForeignGiftTaxCredit",
+          "binding": "ReturnPP.Taxpayer.GeneralInformation.CreditforForeignGiftTaxes",
           "field_type": "dollar",
           "enterable": true
         }
@@ -2182,7 +2182,7 @@ export const ptform = {
         "width": 90,
         "type": "field",
         "style": "CN-10",
-        "binding": "INT",
+        "binding": "ReturnData.IRS709[1].Interest",
         "field_type": "dollar",
         "enterable": true
       }
@@ -2212,7 +2212,7 @@ export const ptform = {
         "width": 90,
         "type": "field",
         "style": "CN-10",
-        "binding": "LATEPAY",
+        "binding": "ReturnData.IRS709[1].LatePaymentPenalty",
         "field_type": "dollar",
         "enterable": true
       }
@@ -2237,7 +2237,7 @@ export const ptform = {
         "field": {
           "type": "field",
           "style": "CN-10",
-          "binding": "ReturnData.IRS709[1].PaidWitheExtension",
+          "binding": "ReturnPP.Taxpayer.Extension.AmountPaidWithExtension",
           "field_type": "dollar",
           "enterable": true
         }
@@ -2266,7 +2266,7 @@ export const ptform = {
         "width": 90,
         "type": "field",
         "style": "CN-10",
-        "binding": "LATEFILE",
+        "binding": "ReturnData.IRS709[1].LateFilingPenalty",
         "field_type": "dollar",
         "enterable": true
       }

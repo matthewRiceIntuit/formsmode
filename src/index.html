@@ -4,7 +4,16 @@
     <meta charset="utf-8" />
 
 </head>
-<body id="root">
+<body id="root"  onload="onResize()">
+
+<script>
+    window.addEventListener("resize", onResize);
+    function onResize(){
+      width = window.innerWidth;
+      ratio = width / 800.0;
+      document.getElementById('root').style.zoom = ratio
+    }
+</script>
 
 </body>
 </html>
