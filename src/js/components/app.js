@@ -26,7 +26,7 @@ export class App extends React.Component {
     const cells = this.props.frf.rows.map((row) => {
       return row.row.map((data) => {
         return (
-          <Cell data={data.cell}/>
+          <Cell data={data.cell} fieldList={this.props.fieldList}/>
         );
       });
     });

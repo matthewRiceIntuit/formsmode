@@ -1,6 +1,7 @@
 import {
   UPDATE_MODEL_SUCCESS,
-  UPDATE_FIELD_SUCCESS
+  UPDATE_FIELD_SUCCESS,
+  ADD_FIELDLIST_SUCCESS
 } from './../constants/model-action-types';
 import {
   FIELD_CHANGE
@@ -20,9 +21,17 @@ export function updateModelSuccess(frf) {
 
 
 
-export function updateModel(frf) {
+export function updateModel(frf,fields) {
   return (dispatch, getState) => {
-    dispatch(updateModelSuccess(flatten(frf)));
+    const flat = flatten(frf);
+    for (var key in fields) {
+      if(flat[key]){
+        fields[key] = flat[key];
+      } else{
+        delete fields[key];
+      }
+    }
+    dispatch(updateModelSuccess(fields));
   }
 }
 
@@ -40,6 +49,22 @@ export function setDataVal(binding, value){
   return (dispatch, getState) => {
     dispatch(updateFieldSuccess(binding, value));
     dispatch(fire_external_event(FIELD_CHANGE,{binding,value}));
+  }
+}
+
+
+
+export function addFieldListSuccess(binding) {
+  return {
+    type: UPDATE_FIELD_SUCCESS,
+    binding
+  };
+}
+
+
+export function addFieldListBinding(binding){
+  return (dispatch, getState) => {
+    dispatch(addFieldListSuccess(binding));
   }
 }
 

@@ -30,10 +30,10 @@ class Cell extends Component {
     )
   }
 
-  renderField(cell) {
+  renderField(cell, fieldList) {
     return (
       <div style={{width: `${cell.width}px`}}>
-        <Field data={cell}/>
+        <Field data={cell} fieldList={fieldList}/>
       </div>
     )
   }
@@ -47,11 +47,11 @@ class Cell extends Component {
     )
   }
 
-  renderGridfield(cell) {
+  renderGridfield(cell, fieldList) {
     return (
       <div style={{width: `${cell.width}px`}}>
         <div className={cell.style}>
-          <Field data={cell.field}/>
+          <Field data={cell.field} fieldList={fieldList}/>
         </div>
       </div>
     )
@@ -73,11 +73,11 @@ class Cell extends Component {
       case 'field':
         if (cell.field_type == 'quickzoom')
           return this.renderQuickZoom(cell);
-        return  this.renderField(cell);
+        return  this.renderField(cell, this.props.fieldList);
       case 'gridline':
         return this.renderGridline(cell);
       case 'gridfield':
-        return this.renderGridfield(cell);
+        return this.renderGridfield(cell, this.props.fieldList);
 
       default:
         return this.renderNone(cell);

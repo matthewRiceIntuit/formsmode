@@ -273,7 +273,7 @@ export const ptform = {
         "field": {
           "type": "field",
           "style": "CN-10",
-          "binding": "ReturnData.IRS709[1].FirstNameAndInital",
+          "binding": "ReturnData.IRS709[0].FirstNameAndInital",
           "field_type": "text",
           "enterable": true
         }
@@ -286,7 +286,7 @@ export const ptform = {
         "field": {
           "type": "field",
           "style": "CN-10",
-          "binding": "ReturnData.IRS709[1].LastName",
+          "binding": "ReturnData.IRS709[0].LastName",
           "field_type": "text",
           "enterable": true
         }
@@ -299,7 +299,7 @@ export const ptform = {
         "field": {
           "type": "field",
           "style": "CN-10",
-          "binding": "ReturnData.IRS709[1].SocialSecurityNumber",
+          "binding": "ReturnData.IRS709[0].SocialSecurityNumber",
           "field_type": "ssn: hyphen (t)",
           "enterable": true
         }
@@ -342,7 +342,7 @@ export const ptform = {
         "field": {
           "type": "field",
           "style": "CN-10",
-          "binding": "ReturnData.IRS709[1].DonorAddressLine1",
+          "binding": "ReturnData.IRS709[0].DonorAddressLine1",
           "field_type": "text",
           "enterable": true
         }
@@ -355,7 +355,7 @@ export const ptform = {
         "field": {
           "type": "field",
           "style": "CN-10",
-          "binding": "ReturnData.IRS709[1].LegalResidenceDesc",
+          "binding": "ReturnData.IRS709[0].LegalResidenceDesc",
           "field_type": "text",
           "enterable": true
         }
@@ -398,7 +398,7 @@ export const ptform = {
         "field": {
           "type": "field",
           "style": "CN-10",
-          "binding": "ReturnData.IRS709[1].DonorAddressCSZ",
+          "binding": "ReturnData.IRS709[0].DonorAddressCSZ",
           "field_type": "text",
           "enterable": true
         }
@@ -411,7 +411,7 @@ export const ptform = {
         "field": {
           "type": "field",
           "style": "CN-10",
-          "binding": "ReturnData.IRS709[1].CitizenshipDesc",
+          "binding": "ReturnData.IRS709[0].CitizenshipDesc",
           "field_type": "text",
           "enterable": true
         }
@@ -451,7 +451,7 @@ export const ptform = {
         "width": 30,
         "type": "field",
         "style": "CN-10",
-        "binding": "ReturnData.IRS709[1].DonorDiedDuringTheYear",
+        "binding": "ReturnData.IRS709[0].DonorDiedDuringTheYear",
         "field_type": "box",
         "enterable": true
       }
@@ -492,7 +492,7 @@ export const ptform = {
         "field": {
           "type": "field",
           "style": "CN-10",
-          "binding": "ReturnData.IRS709[1].DateDonorDiedMMDD",
+          "binding": "ReturnData.IRS709[0].DateDonorDiedMMDD",
           "field_type": "date: default(mm.dd.yy) (t)",
           "enterable": true
         }
@@ -530,7 +530,7 @@ export const ptform = {
         "width": 30,
         "type": "field",
         "style": "CN-10",
-        "binding": "ReturnData.IRS709[1].ExtensionFiled",
+        "binding": "ReturnData.IRS709[0].ExtensionFiled",
         "field_type": "box",
         "enterable": true
       }
@@ -590,7 +590,7 @@ export const ptform = {
         "field": {
           "type": "field",
           "style": "CN-10",
-          "binding": "ReturnData.IRS709[1].TotalNumberOfDonees",
+          "binding": "ReturnData.IRS709[0].TotalNumberOfDonees",
           "field_type": "int",
           "enterable": true
         }
@@ -651,7 +651,7 @@ export const ptform = {
         "width": 30,
         "type": "field",
         "style": "CN-10",
-        "binding": "ReturnData.IRS709[1].EverFileGiftReturnForAnotherYear",
+        "binding": "ReturnData.IRS709[0].EverFileGiftReturnForAnotherYear",
         "field_type": "box",
         "enterable": true
       }
@@ -660,7 +660,7 @@ export const ptform = {
         "width": 30,
         "type": "field",
         "style": "CN-10",
-        "binding": "ReturnData.IRS709[1].EverFileGiftReturnForAnotherYear",
+        "binding": "ReturnData.IRS709[0].EverFileGiftReturnForAnotherYear",
         "field_type": "box",
         "enterable": true
       }
@@ -684,7 +684,7 @@ export const ptform = {
         "width": 30,
         "type": "field",
         "style": "CN-10",
-        "binding": "ReturnData.IRS709[1].AddressChangeInd",
+        "binding": "ReturnData.IRS709[0].AddressChangeInd",
         "field_type": "box",
         "enterable": true
       }
@@ -693,7 +693,7 @@ export const ptform = {
         "width": 30,
         "type": "field",
         "style": "CN-10",
-        "binding": "ReturnData.IRS709[1].AddressChangeInd",
+        "binding": "ReturnData.IRS709[0].AddressChangeInd",
         "field_type": "box",
         "enterable": true
       }
@@ -813,7 +813,7 @@ export const ptform = {
         "width": 30,
         "type": "field",
         "style": "CN-10",
-        "binding": "ReturnData.IRS709[1].GiftsBySpouseToThirdParty",
+        "binding": "ReturnData.IRS709[0].GiftsBySpouseToThirdParty",
         "field_type": "box",
         "enterable": true
       }
@@ -822,7 +822,7 @@ export const ptform = {
         "width": 30,
         "type": "field",
         "style": "CN-10",
-        "binding": "ReturnData.IRS709[1].GiftsBySpouseToThirdParty",
+        "binding": "ReturnData.IRS709[0].GiftsBySpouseToThirdParty",
         "field_type": "box",
         "enterable": true
       }
@@ -850,7 +850,7 @@ export const ptform = {
         "field": {
           "type": "field",
           "style": "CN-10",
-          "binding": "ReturnData.IRS709[1].NameConsentingSpouse",
+          "binding": "ReturnData.IRS709[0].NameConsentingSpouse",
           "field_type": "text",
           "enterable": true
         }
@@ -891,7 +891,7 @@ export const ptform = {
         "field": {
           "type": "field",
           "style": "CN-10",
-          "binding": "ReturnData.IRS709[1].SSNConsentingSpouse",
+          "binding": "ReturnData.IRS709[0].SSNConsentingSpouse",
           "field_type": "ssn: hyphen (t)",
           "enterable": true
         }
@@ -929,7 +929,7 @@ export const ptform = {
         "width": 30,
         "type": "field",
         "style": "CN-10",
-        "binding": "ReturnData.IRS709[1].MarriedToAnotherDuringYear",
+        "binding": "ReturnData.IRS709[0].MarriedToAnotherDuringYear",
         "field_type": "box",
         "enterable": true
       }
@@ -938,7 +938,7 @@ export const ptform = {
         "width": 30,
         "type": "field",
         "style": "CN-10",
-        "binding": "ReturnData.IRS709[1].MarriedToAnotherDuringYear",
+        "binding": "ReturnData.IRS709[0].MarriedToAnotherDuringYear",
         "field_type": "box",
         "enterable": true
       }
@@ -976,7 +976,7 @@ export const ptform = {
         "width": 30,
         "type": "field",
         "style": "CN-10",
-        "binding": "ReturnData.IRS709[1].MarriedPartOfYearInd",
+        "binding": "ReturnData.IRS709[0].MarriedPartOfYearInd",
         "field_type": "box",
         "enterable": true
       }
@@ -1005,7 +1005,7 @@ export const ptform = {
         "width": 30,
         "type": "field",
         "style": "CN-10",
-        "binding": "ReturnData.IRS709[1].DivorcedDuringYearInd",
+        "binding": "ReturnData.IRS709[0].DivorcedDuringYearInd",
         "field_type": "box",
         "enterable": true
       }
@@ -1034,7 +1034,7 @@ export const ptform = {
         "width": 30,
         "type": "field",
         "style": "CN-10",
-        "binding": "ReturnData.IRS709[1].WidowedOrDeceasedDuringYrInd",
+        "binding": "ReturnData.IRS709[0].WidowedOrDeceasedDuringYrInd",
         "field_type": "box",
         "enterable": true
       }
@@ -1053,7 +1053,7 @@ export const ptform = {
         "field": {
           "type": "field",
           "style": "CN-10",
-          "binding": "ReturnData.IRS709[1].DateDeceased",
+          "binding": "ReturnData.IRS709[0].DateDeceased",
           "field_type": "date: default(mm.dd.yy) (t)",
           "enterable": true
         }
@@ -1114,7 +1114,7 @@ export const ptform = {
         "width": 30,
         "type": "field",
         "style": "CN-10",
-        "binding": "ReturnData.IRS709[1].SpouseReturnFiledInd",
+        "binding": "ReturnData.IRS709[0].SpouseReturnFiledInd",
         "field_type": "box",
         "enterable": true
       }
@@ -1123,7 +1123,7 @@ export const ptform = {
         "width": 30,
         "type": "field",
         "style": "CN-10",
-        "binding": "ReturnData.IRS709[1].SpouseReturnFiledInd",
+        "binding": "ReturnData.IRS709[0].SpouseReturnFiledInd",
         "field_type": "box",
         "enterable": true
       }
@@ -1267,7 +1267,7 @@ export const ptform = {
         "width": 30,
         "type": "field",
         "style": "CN-10",
-        "binding": "ReturnData.IRS709[1].DSUEAmountApplied",
+        "binding": "ReturnData.IRS709[0].DSUEAmountApplied",
         "field_type": "box",
         "enterable": true
       }
@@ -1276,7 +1276,7 @@ export const ptform = {
         "width": 30,
         "type": "field",
         "style": "CN-10",
-        "binding": "ReturnData.IRS709[1].DSUEAmountApplied",
+        "binding": "ReturnData.IRS709[0].DSUEAmountApplied",
         "field_type": "box",
         "enterable": true
       }
@@ -1356,7 +1356,7 @@ export const ptform = {
         "field": {
           "type": "field",
           "style": "CN-10",
-          "binding": "ReturnData.IRS709[1].CurrentYearTaxableGifts",
+          "binding": "ReturnData.IRS709[0].CurrentYearTaxableGifts",
           "field_type": "dollar",
           "enterable": false
         }
@@ -1398,7 +1398,7 @@ export const ptform = {
         "field": {
           "type": "field",
           "style": "CN-10",
-          "binding": "ReturnData.IRS709[1].PriorYearTaxableGifts",
+          "binding": "ReturnData.IRS709[0].PriorYearTaxableGifts",
           "field_type": "dollar",
           "enterable": false
         }
@@ -1440,7 +1440,7 @@ export const ptform = {
         "field": {
           "type": "field",
           "style": "CN-10",
-          "binding": "ReturnData.IRS709[1].TotalTaxableGifts",
+          "binding": "ReturnData.IRS709[0].TotalTaxableGifts",
           "field_type": "dollar",
           "enterable": false
         }
@@ -1505,7 +1505,7 @@ export const ptform = {
         "field": {
           "type": "field",
           "style": "CN-10",
-          "binding": "ReturnData.IRS709[1].TotalTaxBeforeCredits",
+          "binding": "ReturnData.IRS709[0].TotalTaxBeforeCredits",
           "field_type": "dollar",
           "enterable": false
         }
@@ -1570,7 +1570,7 @@ export const ptform = {
         "field": {
           "type": "field",
           "style": "CN-10",
-          "binding": "ReturnData.IRS709[1].PriorYearTax",
+          "binding": "ReturnData.IRS709[0].PriorYearTax",
           "field_type": "dollar",
           "enterable": false
         }
@@ -1612,7 +1612,7 @@ export const ptform = {
         "field": {
           "type": "field",
           "style": "CN-10",
-          "binding": "ReturnData.IRS709[1].CurrentYearNetTax",
+          "binding": "ReturnData.IRS709[0].CurrentYearNetTax",
           "field_type": "dollar",
           "enterable": false
         }
@@ -1691,7 +1691,7 @@ export const ptform = {
         "width": 120,
         "type": "gridfield",
         "style": "bottom",
-        "field": {"type": "field", "style": "CN-10", "binding": "ReturnData.IRS709[1].TotalCredit", "field_type": "dollar", "enterable": false}
+        "field": {"type": "field", "style": "CN-10", "binding": "ReturnData.IRS709[0].TotalCredit", "field_type": "dollar", "enterable": false}
       }
     }]
   }, {
@@ -1753,7 +1753,7 @@ export const ptform = {
         "field": {
           "type": "field",
           "style": "CN-10",
-          "binding": "ReturnData.IRS709[1].PriorYearCredit",
+          "binding": "ReturnData.IRS709[0].PriorYearCredit",
           "field_type": "dollar",
           "enterable": false
         }
@@ -1795,7 +1795,7 @@ export const ptform = {
         "field": {
           "type": "field",
           "style": "CN-10",
-          "binding": "ReturnData.IRS709[1].CurrentYearCredit",
+          "binding": "ReturnData.IRS709[0].CurrentYearCredit",
           "field_type": "dollar",
           "enterable": false
         }
@@ -1902,7 +1902,7 @@ export const ptform = {
         "field": {
           "type": "field",
           "style": "CN-10",
-          "binding": "ReturnData.IRS709[1].CurrentYearNetCredit",
+          "binding": "ReturnData.IRS709[0].CurrentYearNetCredit",
           "field_type": "dollar",
           "enterable": false
         }
@@ -1944,7 +1944,7 @@ export const ptform = {
         "field": {
           "type": "field",
           "style": "CN-10",
-          "binding": "ReturnData.IRS709[1].CurrentYearAllowableCredit",
+          "binding": "ReturnData.IRS709[0].CurrentYearAllowableCredit",
           "field_type": "dollar",
           "enterable": false
         }
@@ -2028,7 +2028,7 @@ export const ptform = {
         "field": {
           "type": "field",
           "style": "CN-10",
-          "binding": "ReturnData.IRS709[1].TotalCurrentYearTaxCredit",
+          "binding": "ReturnData.IRS709[0].TotalCurrentYearTaxCredit",
           "field_type": "dollar",
           "enterable": false
         }
@@ -2070,7 +2070,7 @@ export const ptform = {
         "field": {
           "type": "field",
           "style": "CN-10",
-          "binding": "ReturnData.IRS709[1].NetCurrentYearGiftTax",
+          "binding": "ReturnData.IRS709[0].NetCurrentYearGiftTax",
           "field_type": "dollar",
           "enterable": false
         }
@@ -2115,7 +2115,7 @@ export const ptform = {
         "field": {
           "type": "field",
           "style": "CN-10",
-          "binding": "ReturnData.IRS709[1].GSTTax",
+          "binding": "ReturnData.IRS709[0].GSTTax",
           "field_type": "dollar",
           "enterable": false
         }
@@ -2157,7 +2157,7 @@ export const ptform = {
         "field": {
           "type": "field",
           "style": "CN-10",
-          "binding": "ReturnData.IRS709[1].TotalTax",
+          "binding": "ReturnData.IRS709[0].TotalTax",
           "field_type": "dollar",
           "enterable": false
         }
@@ -2182,7 +2182,7 @@ export const ptform = {
         "width": 90,
         "type": "field",
         "style": "CN-10",
-        "binding": "ReturnData.IRS709[1].Interest",
+        "binding": "ReturnData.IRS709[0].Interest",
         "field_type": "dollar",
         "enterable": true
       }
@@ -2212,7 +2212,7 @@ export const ptform = {
         "width": 90,
         "type": "field",
         "style": "CN-10",
-        "binding": "ReturnData.IRS709[1].LatePaymentPenalty",
+        "binding": "ReturnData.IRS709[0].LatePaymentPenalty",
         "field_type": "dollar",
         "enterable": true
       }
@@ -2266,7 +2266,7 @@ export const ptform = {
         "width": 90,
         "type": "field",
         "style": "CN-10",
-        "binding": "ReturnData.IRS709[1].LateFilingPenalty",
+        "binding": "ReturnData.IRS709[0].LateFilingPenalty",
         "field_type": "dollar",
         "enterable": true
       }
@@ -2291,7 +2291,7 @@ export const ptform = {
         "field": {
           "type": "field",
           "style": "CN-10",
-          "binding": "ReturnData.IRS709[1].BalanceDue",
+          "binding": "ReturnData.IRS709[0].BalanceDue",
           "field_type": "dollar",
           "enterable": false
         }
@@ -2336,7 +2336,7 @@ export const ptform = {
         "field": {
           "type": "field",
           "style": "CN-10",
-          "binding": "ReturnData.IRS709[1].Refund",
+          "binding": "ReturnData.IRS709[0].Refund",
           "field_type": "dollar",
           "enterable": false
         }
@@ -2442,7 +2442,7 @@ export const ptform = {
         "width": 30,
         "type": "field",
         "style": "CN-10",
-        "binding": "ReturnData.IRS709[1].DiscussWithPaidPreparerInd",
+        "binding": "ReturnData.IRS709[0].DiscussWithPaidPreparerInd",
         "field_type": "box",
         "enterable": true
       }
@@ -2457,7 +2457,7 @@ export const ptform = {
         "width": 30,
         "type": "field",
         "style": "CN-10",
-        "binding": "ReturnData.IRS709[1].DiscussWithPaidPreparerInd",
+        "binding": "ReturnData.IRS709[0].DiscussWithPaidPreparerInd",
         "field_type": "box",
         "enterable": true
       }
@@ -2574,7 +2574,7 @@ export const ptform = {
         "field": {
           "type": "field",
           "style": "CN-10",
-          "binding": "ReturnData.IRS709[1].PreparerPersonNm",
+          "binding": "ReturnData.IRS709[0].PreparerPersonNm",
           "field_type": "text",
           "enterable": true
         }
@@ -2594,7 +2594,7 @@ export const ptform = {
         "field": {
           "type": "field",
           "style": "CN-10",
-          "binding": "ReturnData.IRS709[1]..Return.ReturnHeader.PaidPreparerInformationGrp.SignatureDt",
+          "binding": "ReturnData.IRS709[0]..Return.ReturnHeader.PaidPreparerInformationGrp.SignatureDt",
           "field_type": "date: default(mm.dd.yy) (t)",
           "enterable": true
         }
@@ -2611,7 +2611,7 @@ export const ptform = {
         "width": 30,
         "type": "field",
         "style": "CN-10",
-        "binding": "ReturnData.IRS709[1].SelfEmployedInd",
+        "binding": "ReturnData.IRS709[0].SelfEmployedInd",
         "field_type": "box",
         "enterable": true
       }
@@ -2623,7 +2623,7 @@ export const ptform = {
         "field": {
           "type": "field",
           "style": "CN-10",
-          "binding": "ReturnData.IRS709[1].PreparerPTIN",
+          "binding": "ReturnData.IRS709[0].PreparerPTIN",
           "field_type": "ssn: hyphen (t)",
           "enterable": false
         }
@@ -2652,7 +2652,7 @@ export const ptform = {
         "field": {
           "type": "field",
           "style": "CN-10",
-          "binding": "ReturnData.IRS709[1].PreparerFirmName",
+          "binding": "ReturnData.IRS709[0].PreparerFirmName",
           "field_type": "text",
           "enterable": false
         }
@@ -2671,7 +2671,7 @@ export const ptform = {
         "field": {
           "type": "field",
           "style": "CN-10",
-          "binding": "ReturnData.IRS709[1].PreparerFirmEIN",
+          "binding": "ReturnData.IRS709[0].PreparerFirmEIN",
           "field_type": "ein: hyphen (t)",
           "enterable": false
         }
@@ -2686,7 +2686,7 @@ export const ptform = {
         "field": {
           "type": "field",
           "style": "CN-10",
-          "binding": "ReturnData.IRS709[1].FirmAddress",
+          "binding": "ReturnData.IRS709[0].FirmAddress",
           "field_type": "text",
           "enterable": false
         }
@@ -2728,7 +2728,7 @@ export const ptform = {
         "field": {
           "type": "field",
           "style": "CN-10",
-          "binding": "ReturnData.IRS709[1].PreparerPhoneNum",
+          "binding": "ReturnData.IRS709[0].PreparerPhoneNum",
           "field_type": "phone",
           "enterable": false
         }

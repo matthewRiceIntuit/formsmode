@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import * as _ from 'lodash';
 import { connect } from 'react-redux';
 import { fire_external_event} from './../actions/external-event-actions';
-import { setDataVal } from './../actions/model-actions';
+import { setDataVal, addFieldListBinding } from './../actions/model-actions';
 
 class Field extends Component {
 
@@ -20,19 +20,21 @@ class Field extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (!this.props.data.enterable && this.props.model !== nextProps.model) {
-      let val = _.get(nextProps.model, this.props.data.binding);
-      if (val !== undefined && this.state.value !== val) {
-        if (this.props.data.field_type === 'dollar'){
-          val = parseInt(val)
-          if (this.state.value == "") this.setState({value: 0});
-          let increment = Math.floor((val - this.state.value) / 14) || 1;
-          setTimeout(() => this.animate(increment, val), 10)
+    if(this.props.model !== nextProps.model){
+      if (!this.props.data.enterable ) {
+        let val = _.get(nextProps.model, this.props.data.binding);
+        if (val !== undefined && this.state.value !== val) {
+          if (this.props.data.field_type === 'dollar'){
+            val = parseInt(val)
+            if (this.state.value == "") this.setState({value: 0});
+            let increment = Math.floor((val - this.state.value) / 14) || 1;
+            setTimeout(() => this.animate(increment, val), 10)
 
-        }
-        else {
-          this.setState({formatted_value:this.numberWithCommas(val)});
-          this.setState({value:val});
+          }
+          else {
+            this.setState({formatted_value:this.numberWithCommas(val)});
+            this.setState({value:val});
+          }
         }
       }
     }
@@ -91,8 +93,9 @@ class Field extends Component {
 
   render() {
 
+
     const data = this.props.data;
-    console.log(this.state.value)
+    this.props.fieldList(data.binding);
 
     const props = {
       type:(data.field_type == 'box')?'checkbox':'text',
@@ -123,7 +126,8 @@ function mapStateToProps(store) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    setDataVal: (binding, value) => dispatch( setDataVal(binding, value))
+    setDataVal: (binding, value) => dispatch( setDataVal(binding, value)),
+    addFieldListBinding: (binding) => dispatch( addFieldListBinding(binding))
   };
 }
 

@@ -15,7 +15,7 @@ export function fire_external_event(event_type, param){
   return (dispatch, getState) => {
     const events = getState().external_event.functions.filter( (data) => data.event_type === event_type);
     const model = {Return: unflatten( getState().model)};
-    events.forEach((evnt)=> evnt.func(param.binding,param.value));
+    events.forEach((evnt)=> evnt.func(param.binding,param.value, model));
   }
 }
 
